@@ -1,5 +1,6 @@
 
 package br.com.projetoinfantil.dao;
+import br.com.projetoinfantil.connection.ConnectionFactory;
 import br.com.projetoinfantil.model.Usuario;
 import java.sql.Connection;
 import java.sql.PreparedStatement;

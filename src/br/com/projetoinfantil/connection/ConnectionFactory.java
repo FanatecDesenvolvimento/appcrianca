@@ -1,5 +1,4 @@
-package br.com.projetoinfantil.dao;
-
+package br.com.projetoinfantil.connection;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -10,13 +9,13 @@ import java.util.logging.Logger;
 
 public class ConnectionFactory {
 
-    private static final String DRIVER = "com.mysql.jdbc.Driver";
-    private static final String URL = "jdbc:mysql://localhost:3306/bdprojetoinfantil";
-    private static final String USER = "root";
-    private static final String PASS = "";
+    private static final String DRIVER = "com.mysql.jdbc.Driver"; //linha para conectar com o driver do banco de dados
+    private static final String URL = "jdbc:mysql://localhost:3306/bdprojetoinfantil"; //URL's database
+    private static final String USER = "root"; //user's database
+    private static final String PASS = ""; //Password users database
 
-    public static Connection getConnection() {
-        try {
+    public static Connection getConnection() { //Connection object represents a physical connection with a database
+       try { //try-catch is a metod similar to if, but it works in case of errors, to avoid crashes
             Class.forName(DRIVER);
             return DriverManager.getConnection(URL, USER, PASS);
         } catch (ClassNotFoundException | SQLException ex) {
