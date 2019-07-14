@@ -18,12 +18,12 @@ public class FilhoDao {
 
      public void create(Filho u) {
         
-        Connection con = ConnectionFactory.getConnection();
+        Connection con = ConnectionFactory.getConnection(); //comando para abrir a conexão
         
         PreparedStatement stmt = null;
 
         try {
-            stmt = con.prepareStatement("INSERT INTO tbfilhos ( sexofilhos, nomefilho, datanascimentofilho, fkidpais)VALUES(?,?,?,?)");
+            stmt = con.prepareStatement("INSERT INTO tbfilhos ( sexofilhos, nomefilho, datanascimentofilho)VALUES(?,?,?)");
             stmt.setInt(1,u.getIdFilho());
             stmt.setString(2, u.getNomeFilho());
             stmt.setInt(3, u.getDataNascimentoFilho());
