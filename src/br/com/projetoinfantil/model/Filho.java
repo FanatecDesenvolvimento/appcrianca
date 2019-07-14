@@ -1,24 +1,33 @@
 package br.com.projetoinfantil.model;
+import java.time.LocalDate;
+import java.time.Period;
 
 public class Filho {
 
     private int idFilho;
     private String sexoFilho;
-    private int dataNascimentoFilho;
+    private LocalDate dataNascimentoFilho;
     private String nomeFilho;
     private int fkidPai;
-    
 
     public Filho() {
     }
 
-    public Filho(int idFilho, String sexoFilho, int dataNascimentoFilho, String nomeFilho) {
+    public Filho(int idFilho, String sexoFilho, LocalDate dataNascimentoFilho, String nomeFilho, int fkidPai) {
         this.idFilho = idFilho;
         this.sexoFilho = sexoFilho;
         this.dataNascimentoFilho = dataNascimentoFilho;
         this.nomeFilho = nomeFilho;
+        this.fkidPai = fkidPai;
     }
-
+    
+    public Period setIdadeFilho(){
+        LocalDate localDate = LocalDate.now();
+        Period periodo = Period.between(dataNascimentoFilho, localDate);
+        periodo.getYears();
+        return periodo;
+    }
+            
     public int getIdFilho() {
         return idFilho;
     }
@@ -35,11 +44,11 @@ public class Filho {
         this.sexoFilho = sexoFilho;
     }
 
-    public int getDataNascimentoFilho() {
+    public LocalDate getDataNascimentoFilho() {
         return dataNascimentoFilho;
     }
 
-    public void setDataNascimentoFilho(int DataNascimentoFilho) {
+    public void setDataNascimentoFilho(LocalDate dataNascimentoFilho) {
         this.dataNascimentoFilho = dataNascimentoFilho;
     }
 
@@ -51,7 +60,7 @@ public class Filho {
         this.nomeFilho = nomeFilho;
     }
 
-      public int getFkidPai() {
+    public int getFkidPai() {
         return fkidPai;
     }
 
@@ -59,13 +68,9 @@ public class Filho {
         this.fkidPai = fkidPai;
     }
 
-    
     @Override
     public String toString() {
         return "Filho{" + "idFilho=" + idFilho + ", sexoFilho=" + sexoFilho + ", dataNascimentoFilho=" + dataNascimentoFilho + ", nomeFilho=" + nomeFilho + '}';
     }
-
-  
-   
 
 }
