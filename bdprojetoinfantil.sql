@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 08-Ago-2019 às 16:52
+-- Generation Time: 09-Ago-2019 às 17:09
 -- Versão do servidor: 10.1.37-MariaDB
 -- versão do PHP: 7.3.0
 
@@ -58,10 +58,38 @@ INSERT INTO `tbatividades` (`idatividades`, `descricaoatividades`, `faixaativida
 (17, 'Invente sons musicais com objetos disponíveis em casa, como: tampas de panelas, garrafas plásticas com pedrinhas dentro, chocalhos com tampinhas de garrafas e diferentes tamanhos de caixa de papelão, que poderão imitar o som de um tambor. Atenção! Cuide para que os materiais estejam bem vedados para que não haja risco durante o seu manuseio.', '3-6'),
 (18, 'Próximo aos seis meses, estimule seu bebê a sentar-se sozinho. Sente-o em lugar seguro apoiando-o entre almofadas, travesseiros, rolinhos ou cobertor. Coloque perto do bebê brinquedos e objetos de diferentes tamanhos, cores e formas, estimulando o bebê para que os pegue. Aos poucos vá retirando o apoio para que ele se esforce mantendo-se equilibrado até conseguir ficar sentado sem a necessidade de apoio.', '3-6'),
 (19, 'Cante músicas alegres, com ritmos variados, batendo palmas, sacudindo as mãos e a cabeça. O bebê prestará atenção nos gestos e movimentos que voce? fizer e tentara? imitar.\r\n', '3-6'),
-(20, 'Os brinquedos oferecidos devem ser de formas diferentes e na?o ultrapassando o tamanho da ma?o da crianc?a que ira? utiliza?-lo. Podem ser colocados e retirados de bacias, panelas ou caixas. Primeiro voce? coloca um e estimula a crianc?a fazer o mesmo. No princi?pio, voce? vera? que seus movimentos ainda na?o esta?o bem definidos para sua idade; sa?o inseguros. Mas aos poucos ira?o se tornando cada vez melhores.', '6-9'),
-(21, 'Convide o bebe? a bater um objeto no outro. Utilize brinquedos de madeira, pla?stico, borracha ou papela?o.\r\n', '6-9'),
-(22, 'Ao alimentá-lo, mais para o final desse peri?odo, oferec?a pedacinhos de alimentos macios para que os pegue com suas pro?prias ma?os, utilizando os 2 dedos. Oferec?a tambe?m pequenos objetos ou brinquedos para que repita o mesmo movimento, mas cuide para que ele na?o os coloque na boca. Esses esti?mulos favorecera?o o movimento da ponta dos dedos.', '6-9'),
-(23, 'Brinque de esconder objetos com seu filho. Cubra os objetos com uma fralda ou pano e pergunte a ele onde esta?. Caso na?o encontre, retire para que ele pegue o objeto. Pro?ximo aos 9 meses, voce? pode esconder em outros lugares. E? possi?vel que o bebe? procure no mesmo lugar. Na?o importa, esta? se divertindo e aprendendo.', '6-9');
+(20, 'Os brinquedos oferecidos devem ser de formas diferentes e não ultrapassando o tamanho da mão da criança que irá utilizá-lo. Podem ser colocados e retirados de bacias, panelas ou caixas. Primeiro você coloca um e estimula a criança fazer o mesmo. No princípio, você verá que seus movimentos ainda não esto bem definidos para sua idade; são inseguros. Mas aos poucos irão se tornando cada vez melhores.', '6-9'),
+(21, 'Convide o bebê a bater um objeto no outro. Utilize brinquedos de madeira, plástico, borracha ou papelão.\r\n', '6-9'),
+(22, 'Ao alimentá-lo, mais para o final desse período, ofereça pedacinhos de alimentos macios para que os pegue com suas próprias mãos, utilizando os 2 dedos. Ofereça também pequenos objetos ou brinquedos para que repita o mesmo movimento, mas cuide para que ele não os coloque na boca. Esses estímulos favorecerão o movimento da ponta dos dedos.', '6-9'),
+(23, 'Brinque de esconder objetos com seu filho. Cubra os objetos com uma fralda ou pano e pergunte a ele onde está. Caso não encontre, retire para que ele pegue o objeto. Próximo aos 9 meses, você pode esconder em outros lugares. É possível que o bebê procure no mesmo lugar. Não importa, está se divertindo e aprendendo.', '6-9'),
+(24, 'Comece a ensinar outros movimentos a seu filho, como brincadeiras e gestos, o “Parabéns a você” batendo palmas ou dar “tchau”. Ao conseguir imitar ele achará graça.', '6-9'),
+(25, 'Repita os sons que ele fizer e espere que ele responda. Quando ele responder, sorria para que ele sorria também e continue na brincadeira. No dia-a-dia, chame seu filho pelo nome, bem como os demais membros da família para que aprenda a identificá-los.\r\n', '6-9'),
+(26, 'Ao final da faixa etária o bebê já pode estar falando palavras simples, como “mama”, “papa”. Se ainda não estiver fazendo, logo o fará.', '6-9'),
+(27, 'Coloque o bebê no chão e mostre a ele brinquedos que chamem sua atenção para que os alcance. Depois, mude o brinquedo de lugar para que engatinhe em diferentes direções. Sente você também no chão e peça para o que o bebê passe por cima de suas pernas. Você pode estimular o bebê a engatinhar. Ajude-o apoiando as palmas das suas mãos na planta dos pés do bebê para que ele obtenha o impulso necessário no processo de engatinhar.\r\n', '6-9'),
+(28, 'Quando estiver sentado, coloque seu filho no chão perto de uma cadeira, sofá ou mesa. Ponha um brinquedo sobre o móvel e o estimule para que se levante e pegue. Ajude, se necessário. Caso esteja em pé, coloque o brinquedo no chão e peça a mesma coisa.\r\n', '6-9'),
+(29, 'Amarre um brinquedo com um cordão e puxe. Assim você estará estimulando-o para que engatinhe em direção ao brinquedo. Lembre que as brincadeiras com cordas, fios ou cordões devem sempre acontecer na presença de um adulto!', '6-9'),
+(30, 'Dê ordens simples como: “me dá a mão”, “vem aqui”, “traz o brinquedo” e faça perguntas como: “Onde está o papai?”, “Onde está o cachorro?”.\r\n', '9-12'),
+(31, 'Estimule seu filho a manter um diálogo. Quando ele estiver falando fique em silêncio prestando atenção ao que ele diz e demonstrando interesse. Só depois que ele terminar, responda com alegria e carinho, mesmo que, muitas vezes, não entenda o que ele disse.\r\n', '9-12'),
+(32, 'Quando você repetir os sons que ele produz, comece a combinar com palavras como: “mamãe”, “papai”, “vovó”. Dessa forma, pouco a pouco ele irá repetir as palavras.\r\n', '9-12'),
+(33, 'Estimule seu filho a manter um diálogo. Quando ele estiver falando fique em silêncio prestando atenção ao que ele diz e demonstrando interesse. Só depois que ele terminar, responda com alegria e carinho, mesmo que, muitas vezes, não entenda o que ele disse.\r\n', '9-12'),
+(34, 'Cante músicas com diferentes ritmos incentivando a criança a dançar, movimentar o corpo e seguir no balanço da música.\r\n', '9-12'),
+(35, 'Quando o bebê pedir algo, apontando com o dedo, pronuncie o nome do objeto para que ele comece a se acostumar com o nome e repita com você.\r\n', '9-12'),
+(36, 'Seu filho já sabe identificar as partes do corpo, quando solicitado. O uso de música infantil favorece a prática dessa atividade.\r\n', '9-12'),
+(37, 'Coloque o bebê sentado no seu colo e mostre fotos, revistas e livros conversando sobre eles e imitando os sons do que vê. Aproveite esses momentos também para estimular seu filho a soprar velinhas, plumas e papéis.\r\n', '9-12'),
+(38, 'Estimule a criança para brincar com a boneca, dar comida a ela, colocá-la para dormir, dar banho, a passear com o cachorro e pentear o ursinho. Peça a ela que faça o mesmo. Assim, brincando, ele vai aprendendo a fazer coisas simples com os objetos.', '9-12'),
+(39, 'Estimule seu filho a caminhar sozinho, segurando em suas duas ma?os e depois apenas numa. É normal que caia ou perca o equilíbrio. Ajude-o a levantar-se para que continue tentando caminhar. Lembre-se da importância de transmitir confiança e segurança. Não faça das quedas e tropeços um grande problema.\r\n', '9-12'),
+(40, 'Quando ele estiver em pé, apoiado em algum móvel, ofereça algum brinquedo para que ele se solte e caminhe, com muito cuidado!\r\n', '9-12'),
+(41, 'Ofereça brinquedos para que ele os coloque em um pote ou caixa. Depois peça que retire e coloque em outra vasilha. Lembre-se que você deve estar presente e ter muito cuidado para que a criança não coloque qualquer objeto na boca, nariz ou orelhas.\r\n', '9-12'),
+(42, 'Coloque um brinquedo sobre uma fralda ou pano de modo que ele na?o possa alcançar com as mãos. Mostre como pegá-lo arrastando.', '9-12'),
+(43, 'Cante mu?sicas com diferentes ritmos incentivando a crianc?a a danc?ar, movimentar o corpo e seguir no balanc?o da mu?sica.\r\n', '9-12'),
+(44, 'Quando o bebê pedir algo, apontando com o dedo, pronuncie o nome do objeto para que ele comece a se acostumar com o nome e repita com você.\r\n', '9-12'),
+(45, 'Seu filho já sabe identificar as partes do corpo, quando solicitado. O uso de música infantil favorece a prática dessa atividade.\r\n', '9-12'),
+(46, 'Coloque o bebê sentado no seu colo e mostre fotos, revistas e livros conversando sobre eles e imitando os sons do que vê. Aproveite esses momentos também para estimular seu filho a soprar velinhas, plumas e papéis.\r\n', '9-12'),
+(47, 'Estimule a criança para brincar com a boneca, dar comida a ela, colocá-la para dormir, dar banho, a passear com o cachorro e pentear o ursinho. Peça a ela que faça o mesmo. Assim, brincando, ele vai aprendendo a fazer coisas simples com os objetos.', '9-12'),
+(48, 'Estimule seu filho a caminhar sozinho, segurando em suas duas mãos e depois apenas numa. É normal que caia ou perca o equilíbrio. Ajude-o a levantar-se para que continue tentando caminhar. Lembre-se da importância de transmitir confiança e segurança. Não faça das quedas e tropeços um grande problema.\r\n', '9-12'),
+(49, 'Quando ele estiver em pé, apoiado em algum móvel, ofereça algum brinquedo para que ele se solte e caminhe, com muito cuidado!\r\n', '9-12'),
+(50, 'Ofereça brinquedos para que ele os coloque em um pote ou caixa. Depois peça que retire e coloque em outra vasilha. Lembre-se que você deve estar presente e ter muito cuidado para que a criança não coloque qualquer objeto na boca, nariz ou orelhas.\r\n', '9-12'),
+(52, 'Coloque um brinquedo sobre uma fralda ou pano de modo que ele na?o possa alcanc?ar com as ma?os. Mostre como pega?-lo arrastando.', '9-12');
 
 -- --------------------------------------------------------
 
@@ -87,18 +115,16 @@ CREATE TABLE `tbpais` (
   `idpais` int(11) NOT NULL,
   `telefonespais` int(11) DEFAULT NULL,
   `senhapais` int(11) DEFAULT NULL,
-  `datanascimentopais` date DEFAULT NULL,
   `loginpais` varchar(80) COLLATE latin1_general_ci DEFAULT NULL,
-  `emailpais` varchar(80) COLLATE latin1_general_ci DEFAULT NULL,
-  `sexopais` varchar(30) COLLATE latin1_general_ci DEFAULT NULL
+  `emailpais` varchar(80) COLLATE latin1_general_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
 --
 -- Extraindo dados da tabela `tbpais`
 --
 
-INSERT INTO `tbpais` (`idpais`, `telefonespais`, `senhapais`, `datanascimentopais`, `loginpais`, `emailpais`, `sexopais`) VALUES
-(1, NULL, 123, NULL, 'hegon', NULL, NULL);
+INSERT INTO `tbpais` (`idpais`, `telefonespais`, `senhapais`, `loginpais`, `emailpais`) VALUES
+(1, NULL, 123, 'hegon', NULL);
 
 --
 -- Indexes for dumped tables
@@ -131,7 +157,7 @@ ALTER TABLE `tbpais`
 -- AUTO_INCREMENT for table `tbatividades`
 --
 ALTER TABLE `tbatividades`
-  MODIFY `idatividades` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `idatividades` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
 
 --
 -- AUTO_INCREMENT for table `tbfilhos`
