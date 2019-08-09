@@ -76,9 +76,9 @@ public class FrmCadastrarFilhos extends javax.swing.JFrame {
         btExcluir = new javax.swing.JButton();
         txtPesquisarFilho = new javax.swing.JTextField();
         btPesquisar = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         txtpai = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -100,13 +100,15 @@ public class FrmCadastrarFilhos extends javax.swing.JFrame {
         lbCadastroFilhos.setForeground(new java.awt.Color(255, 255, 255));
         lbCadastroFilhos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/iconfinder_kids_together_mom-01_3181663.png"))); // NOI18N
         lbCadastroFilhos.setText("CADASTRE SEU FILHO");
-        getContentPane().add(lbCadastroFilhos, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, -1, -1));
+        getContentPane().add(lbCadastroFilhos, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, -1));
 
-        lbNome.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        lbNome.setFont(new java.awt.Font("Ravie", 1, 18)); // NOI18N
+        lbNome.setForeground(new java.awt.Color(255, 255, 255));
         lbNome.setText("Nome");
-        getContentPane().add(lbNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 190, -1, -1));
+        getContentPane().add(lbNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, -1, -1));
 
         lbSexo.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        lbSexo.setForeground(new java.awt.Color(255, 255, 255));
         lbSexo.setText("Sexo:");
         getContentPane().add(lbSexo, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 270, -1, -1));
 
@@ -115,24 +117,25 @@ public class FrmCadastrarFilhos extends javax.swing.JFrame {
                 txtNomeFilhoActionPerformed(evt);
             }
         });
-        getContentPane().add(txtNomeFilho, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 180, 137, 30));
+        getContentPane().add(txtNomeFilho, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, 300, 30));
 
         rbMasculino.setText("Masculino");
-        getContentPane().add(rbMasculino, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 270, -1, -1));
+        getContentPane().add(rbMasculino, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 270, -1, -1));
 
         rbFeminino.setText("Feminino");
-        getContentPane().add(rbFeminino, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 270, -1, -1));
+        getContentPane().add(rbFeminino, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 270, -1, -1));
 
         lbDataDeNascimento.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        lbDataDeNascimento.setForeground(new java.awt.Color(255, 255, 255));
         lbDataDeNascimento.setText("Data de nascimento");
-        getContentPane().add(lbDataDeNascimento, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 230, -1, -1));
+        getContentPane().add(lbDataDeNascimento, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 160, -1, -1));
 
         txtDataDeNascimentoFilho.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtDataDeNascimentoFilhoActionPerformed(evt);
             }
         });
-        getContentPane().add(txtDataDeNascimentoFilho, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 230, 95, 30));
+        getContentPane().add(txtDataDeNascimentoFilho, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 190, 120, 30));
 
         tbfilhos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -197,19 +200,21 @@ public class FrmCadastrarFilhos extends javax.swing.JFrame {
         });
         getContentPane().add(btPesquisar, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 320, 110, 30));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/barra-inferior-background.png"))); // NOI18N
-        jLabel2.setText("jLabel2");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -30, 680, 190));
-
+        jLabel1.setFont(new java.awt.Font("Ravie", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Pais");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 220, -1, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 230, -1, -1));
 
         txtpai.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtpaiActionPerformed(evt);
             }
         });
-        getContentPane().add(txtpai, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 250, 90, -1));
+        getContentPane().add(txtpai, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 240, 90, -1));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Background FrmCadastrarFilhos.jpg"))); // NOI18N
+        jLabel2.setText("jLabel2");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -70, 620, 640));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -234,7 +239,6 @@ public class FrmCadastrarFilhos extends javax.swing.JFrame {
         Filho u = new Filho();
         FilhoDao dao = new FilhoDao();
         u.setNomeFilho(txtNomeFilho.getText());
-        u.setDataNascimentoFilho(Integer.parseInt(txtDataDeNascimentoFilho.getText()));
         if(rbFeminino.isSelected()){
         u.setSexoFilho("Feminino");
         }else{
@@ -263,7 +267,6 @@ public class FrmCadastrarFilhos extends javax.swing.JFrame {
             FilhoDao dao = new FilhoDao();
 
             u.setNomeFilho(txtNomeFilho.getText());
-            u.setDataNascimentoFilho(Integer.parseInt(txtDataDeNascimentoFilho.getText()));
             u.setSexoFilho(rbMasculino.getText());
             u.setSexoFilho(rbFeminino.getText());
             dao.update(u);
