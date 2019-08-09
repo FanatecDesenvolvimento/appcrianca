@@ -41,14 +41,16 @@ public class FrmLogin extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        txtLogin.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        txtLogin.setFont(new java.awt.Font("Ravie", 1, 18)); // NOI18N
+        txtLogin.setForeground(new java.awt.Color(255, 255, 0));
         txtLogin.setText("Login:");
-        getContentPane().add(txtLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 100, -1, -1));
+        getContentPane().add(txtLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 170, -1, -1));
 
-        txtSenha.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        txtSenha.setFont(new java.awt.Font("Ravie", 1, 18)); // NOI18N
+        txtSenha.setForeground(new java.awt.Color(255, 255, 0));
         txtSenha.setText("Senha:");
-        getContentPane().add(txtSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 150, -1, -1));
-        getContentPane().add(ctLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 100, 105, 28));
+        getContentPane().add(txtSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 230, -1, -1));
+        getContentPane().add(ctLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 170, 240, 30));
 
         jButton1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jButton1.setText("Logar");
@@ -57,12 +59,12 @@ public class FrmLogin extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 200, -1, -1));
-        getContentPane().add(csSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 150, 100, -1));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 280, -1, -1));
+        getContentPane().add(csSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 230, 240, 30));
 
-        img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/barra-inferior-background.png"))); // NOI18N
+        img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Background FrmLogin.png"))); // NOI18N
         img.setText("jLabel1");
-        getContentPane().add(img, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 350, 290));
+        getContentPane().add(img, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 1060, 490));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

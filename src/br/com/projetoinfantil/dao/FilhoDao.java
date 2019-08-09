@@ -26,7 +26,7 @@ public class FilhoDao {
             stmt = con.prepareStatement("INSERT INTO tbfilhos ( sexofilhos, nomefilho, datanascimentofilho)VALUES(?,?,?)");
             stmt.setInt(1,u.getIdFilho());
             stmt.setString(2, u.getNomeFilho());
-            stmt.setInt(3, u.getDataNascimentoFilho());
+            //stmt.setInt(3, u.getDataNascimentoFilho());
             stmt.setString(4, u.getSexoFilho());
             stmt.setInt(4, u.getFkidPai());
             
@@ -61,7 +61,7 @@ public class FilhoDao {
 
                 Filho.setIdFilho(rs.getInt("idfilhos"));
                 Filho.setNomeFilho(rs.getString("nomefilho"));
-                Filho.setDataNascimentoFilho(rs.getInt("datanascimentofilho"));
+//                Filho.setDataNascimentoFilho(rs.getInt("datanascimentofilho"));
                 Filho.setSexoFilho(rs.getString("sexofilhos"));
                 Filho.setFkidPai(rs.getInt("fkidpai"));
                 Filhos.add(Filho);
@@ -97,7 +97,7 @@ public class FilhoDao {
 
                 Filho.setIdFilho(rs.getInt("idfilhos"));
                 Filho.setNomeFilho(rs.getString("nomefilho"));
-                Filho.setDataNascimentoFilho(rs.getInt("datanascimentofilho"));
+//                Filho.setDataNascimentoFilho(rs.getInt("datanascimentofilho"));
                 Filho.setSexoFilho(rs.getString("sexofilho"));
                 Filho.setFkidPai(rs.getInt("fkidpais"));
                 Filhos.add(Filho);
@@ -123,7 +123,7 @@ public class FilhoDao {
             stmt = con.prepareStatement("UPDATE tbfilhos SET sexofilho = ?,datanascimentofilho = ?, nomefilho = ? WHERE idfilhos = ?");
             stmt.setInt(1,u.getIdFilho());
             stmt.setString(2, u.getNomeFilho());
-            stmt.setInt(3, u.getDataNascimentoFilho());
+//            stmt.setInt(3, u.getDataNascimentoFilho());
             stmt.setString(4, u.getSexoFilho());
 
             stmt.executeUpdate();
