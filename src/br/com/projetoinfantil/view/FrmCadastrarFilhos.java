@@ -3,6 +3,10 @@ package br.com.projetoinfantil.view;
 
 import br.com.projetoinfantil.dao.FilhoDao;
 import br.com.projetoinfantil.model.Filho;
+import static com.sun.org.apache.xalan.internal.lib.ExsltDatetime.date;
+import static com.sun.org.apache.xalan.internal.lib.ExsltDatetime.date;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableRowSorter;
@@ -15,6 +19,8 @@ public class FrmCadastrarFilhos extends javax.swing.JFrame {
 
     public FrmCadastrarFilhos() {
         initComponents();
+        btAlterar.setEnabled(false);
+        btExcluir.setEnabled(false);
         setLocationRelativeTo(null);
         DefaultTableModel modelo = (DefaultTableModel) tbfilhos.getModel();
         tbfilhos.setRowSorter(new TableRowSorter(modelo));
@@ -68,7 +74,6 @@ public class FrmCadastrarFilhos extends javax.swing.JFrame {
         rbMasculino = new javax.swing.JRadioButton();
         rbFeminino = new javax.swing.JRadioButton();
         lbDataDeNascimento = new javax.swing.JLabel();
-        txtDataDeNascimentoFilho = new javax.swing.JTextField();
         jScrollPane2 = new javax.swing.JScrollPane();
         tbfilhos = new javax.swing.JTable();
         btSalvar = new javax.swing.JButton();
@@ -79,6 +84,7 @@ public class FrmCadastrarFilhos extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         txtpai = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
+        txtDataDeNascimentoFilho = new javax.swing.JFormattedTextField();
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -129,13 +135,6 @@ public class FrmCadastrarFilhos extends javax.swing.JFrame {
         lbDataDeNascimento.setForeground(new java.awt.Color(255, 255, 255));
         lbDataDeNascimento.setText("Data de nascimento");
         getContentPane().add(lbDataDeNascimento, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 160, -1, -1));
-
-        txtDataDeNascimentoFilho.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtDataDeNascimentoFilhoActionPerformed(evt);
-            }
-        });
-        getContentPane().add(txtDataDeNascimentoFilho, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 190, 120, 30));
 
         tbfilhos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -214,7 +213,10 @@ public class FrmCadastrarFilhos extends javax.swing.JFrame {
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Background FrmCadastrarFilhos.jpg"))); // NOI18N
         jLabel2.setText("jLabel2");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -70, 620, 640));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -70, 410, 640));
+
+        txtDataDeNascimentoFilho.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(java.text.DateFormat.getDateInstance(java.text.DateFormat.MEDIUM))));
+        getContentPane().add(txtDataDeNascimentoFilho, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 280, 130, 30));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -310,12 +312,10 @@ public class FrmCadastrarFilhos extends javax.swing.JFrame {
     }//GEN-LAST:event_txtPesquisarFilhoActionPerformed
 
     private void btPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPesquisarActionPerformed
+        btAlterar.setEnabled(true);
+        btExcluir.setEnabled(true);
         readForDesc(txtPesquisarFilho.getText());
     }//GEN-LAST:event_btPesquisarActionPerformed
-
-    private void txtDataDeNascimentoFilhoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDataDeNascimentoFilhoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtDataDeNascimentoFilhoActionPerformed
 
     private void txtpaiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtpaiActionPerformed
         // TODO add your handling code here:
@@ -381,7 +381,7 @@ public class FrmCadastrarFilhos extends javax.swing.JFrame {
     private javax.swing.JRadioButton rbFeminino;
     private javax.swing.JRadioButton rbMasculino;
     private javax.swing.JTable tbfilhos;
-    private javax.swing.JTextField txtDataDeNascimentoFilho;
+    private javax.swing.JFormattedTextField txtDataDeNascimentoFilho;
     private javax.swing.JTextField txtNomeFilho;
     private javax.swing.JTextField txtPesquisarFilho;
     private javax.swing.JTextField txtpai;
