@@ -13,7 +13,9 @@ public class Usuario {
         this.nomeUsu = nomeUsu;
         this.loginUsu = loginUsu;
         this.senhaUsu = senhaUsu;
+        
     }
+    
 
     public Usuario() {
     }

@@ -1,4 +1,5 @@
 package br.com.projetoinfantil.view;
+
 import br.com.projetoinfantil.dao.CadastrarPaisDao;
 import br.com.projetoinfantil.model.CadastrarPais;
 import javax.swing.JOptionPane;
@@ -27,6 +28,7 @@ public class FrmCadastrarPais extends javax.swing.JFrame {
         lbSenha1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lbSenhaRepete.setFont(new java.awt.Font("Ravie", 0, 18)); // NOI18N
@@ -65,17 +67,22 @@ public class FrmCadastrarPais extends javax.swing.JFrame {
     private void btSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btSalvarActionPerformed
         CadastrarPais u = new CadastrarPais();
         CadastrarPaisDao dao = new CadastrarPaisDao();
+        String login = txtLogin.getText();
         String confereSenha = String.copyValueOf(senha.getPassword());
         String confereConfirmar = String.copyValueOf(confirmar.getPassword());
-        if (confereSenha.equals(confereConfirmar)) {
+
+        if (confereSenha.equals(confereConfirmar) && confereSenha.length() != 0 && login.length() != 0 ) {
             u.setLoginpais(txtLogin.getText());
             u.setSenhapais(senha.getText());
             JOptionPane.showMessageDialog(null, "Usuário cadastrado!");
             new FrmLogin().setVisible(true);
-        } else {
+            dao.create(u);
+        }else if (confereSenha.compareTo(confereConfirmar) != 0){
             JOptionPane.showMessageDialog(null, "Senhas não conferem!");
+        }else{
+            JOptionPane.showMessageDialog(null, "Preencha os campos acima!");
         }
-        dao.create(u);
+        
     }//GEN-LAST:event_btSalvarActionPerformed
 
     private void senhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_senhaActionPerformed

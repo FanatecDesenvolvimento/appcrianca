@@ -72,7 +72,7 @@ public class FrmMenu extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jCheckBoxMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxMenuItem2ActionPerformed
-        new FrmCadastrarFilhos().setVisible(true);
+        new FrmCadastrarFilhos().setVisible(false);
     }//GEN-LAST:event_jCheckBoxMenuItem2ActionPerformed
 
     /**
@@ -105,7 +105,7 @@ public class FrmMenu extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new FrmMenu().setVisible(true);
+                new FrmMenu().setVisible(false);
             }
         });
     }

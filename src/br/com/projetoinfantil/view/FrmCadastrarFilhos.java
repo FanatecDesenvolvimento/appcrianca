@@ -3,10 +3,7 @@ package br.com.projetoinfantil.view;
 
 import br.com.projetoinfantil.dao.FilhoDao;
 import br.com.projetoinfantil.model.Filho;
-import static com.sun.org.apache.xalan.internal.lib.ExsltDatetime.date;
-import static com.sun.org.apache.xalan.internal.lib.ExsltDatetime.date;
-import java.text.SimpleDateFormat;
-import java.util.Date;
+
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableRowSorter;
@@ -83,8 +80,8 @@ public class FrmCadastrarFilhos extends javax.swing.JFrame {
         btPesquisar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         txtpai = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
         txtDataDeNascimentoFilho = new javax.swing.JFormattedTextField();
+        jLabel2 = new javax.swing.JLabel();
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -211,12 +208,17 @@ public class FrmCadastrarFilhos extends javax.swing.JFrame {
         });
         getContentPane().add(txtpai, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 240, 90, -1));
 
+        txtDataDeNascimentoFilho.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(java.text.DateFormat.getDateInstance(java.text.DateFormat.MEDIUM))));
+        txtDataDeNascimentoFilho.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtDataDeNascimentoFilhoActionPerformed(evt);
+            }
+        });
+        getContentPane().add(txtDataDeNascimentoFilho, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 210, 130, 30));
+
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Background FrmCadastrarFilhos.jpg"))); // NOI18N
         jLabel2.setText("jLabel2");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -70, 410, 640));
-
-        txtDataDeNascimentoFilho.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(java.text.DateFormat.getDateInstance(java.text.DateFormat.MEDIUM))));
-        getContentPane().add(txtDataDeNascimentoFilho, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 280, 130, 30));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -70, 620, 640));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -320,6 +322,10 @@ public class FrmCadastrarFilhos extends javax.swing.JFrame {
     private void txtpaiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtpaiActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtpaiActionPerformed
+
+    private void txtDataDeNascimentoFilhoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDataDeNascimentoFilhoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtDataDeNascimentoFilhoActionPerformed
 
     /**
      * @param args the command line arguments
