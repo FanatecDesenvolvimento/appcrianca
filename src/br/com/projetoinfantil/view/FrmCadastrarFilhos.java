@@ -1,8 +1,9 @@
-
 package br.com.projetoinfantil.view;
 
 import br.com.projetoinfantil.dao.FilhoDao;
 import br.com.projetoinfantil.model.Filho;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
@@ -62,8 +63,7 @@ public class FrmCadastrarFilhos extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        btGroup = new javax.swing.ButtonGroup();
         lbCadastroFilhos = new javax.swing.JLabel();
         lbNome = new javax.swing.JLabel();
         lbSexo = new javax.swing.JLabel();
@@ -78,23 +78,8 @@ public class FrmCadastrarFilhos extends javax.swing.JFrame {
         btExcluir = new javax.swing.JButton();
         txtPesquisarFilho = new javax.swing.JTextField();
         btPesquisar = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        txtpai = new javax.swing.JTextField();
         txtDataDeNascimentoFilho = new javax.swing.JFormattedTextField();
         jLabel2 = new javax.swing.JLabel();
-
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
-            }
-        ));
-        jScrollPane1.setViewportView(jTable1);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -122,9 +107,16 @@ public class FrmCadastrarFilhos extends javax.swing.JFrame {
         });
         getContentPane().add(txtNomeFilho, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, 300, 30));
 
+        btGroup.add(rbMasculino);
         rbMasculino.setText("Masculino");
+        rbMasculino.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rbMasculinoActionPerformed(evt);
+            }
+        });
         getContentPane().add(rbMasculino, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 270, -1, -1));
 
+        btGroup.add(rbFeminino);
         rbFeminino.setText("Feminino");
         getContentPane().add(rbFeminino, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 270, -1, -1));
 
@@ -196,18 +188,6 @@ public class FrmCadastrarFilhos extends javax.swing.JFrame {
         });
         getContentPane().add(btPesquisar, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 320, 110, 30));
 
-        jLabel1.setFont(new java.awt.Font("Ravie", 1, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Pais");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 230, -1, -1));
-
-        txtpai.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtpaiActionPerformed(evt);
-            }
-        });
-        getContentPane().add(txtpai, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 240, 90, -1));
-
         txtDataDeNascimentoFilho.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(java.text.DateFormat.getDateInstance(java.text.DateFormat.MEDIUM))));
         txtDataDeNascimentoFilho.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -218,7 +198,7 @@ public class FrmCadastrarFilhos extends javax.swing.JFrame {
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Background FrmCadastrarFilhos.jpg"))); // NOI18N
         jLabel2.setText("jLabel2");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -70, 620, 640));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 620, 510));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -228,12 +208,11 @@ public class FrmCadastrarFilhos extends javax.swing.JFrame {
 
             txtNomeFilho.setText(tbfilhos.getValueAt(tbfilhos.getSelectedRow(), 0).toString());
             txtDataDeNascimentoFilho.setText(tbfilhos.getValueAt(tbfilhos.getSelectedRow(), 1).toString());
-            if(tbfilhos.getValueAt(tbfilhos.getSelectedRow(), 2).toString().equals("Feminino")){
+            if (tbfilhos.getValueAt(tbfilhos.getSelectedRow(), 2).toString().equals("Feminino")) {
                 rbFeminino.setSelected(true);
-            }            else{
+            } else {
                 rbMasculino.setSelected(true);
             }
-            txtpai.setText(tbfilhos.getValueAt(tbfilhos.getSelectedRow(), 3).toString());
 
         }
 
@@ -243,18 +222,21 @@ public class FrmCadastrarFilhos extends javax.swing.JFrame {
         Filho u = new Filho();
         FilhoDao dao = new FilhoDao();
         u.setNomeFilho(txtNomeFilho.getText());
-        if(rbFeminino.isSelected()){
-        u.setSexoFilho("Feminino");
-        }else{
+        if (rbFeminino.isSelected()) {
+            u.setSexoFilho("Feminino");
+        } else {
             u.setSexoFilho("Masculino");
         }
         u.setFkidPai(WIDTH);
-        
+
         dao.create(u);
         txtNomeFilho.setText("");
         txtDataDeNascimentoFilho.setText("");
-        rbMasculino.setText("");
-        rbFeminino.setText("");
+        if (rbMasculino.isSelected()) {
+            rbMasculino.setText("");
+        } else {
+            rbFeminino.setText("");
+        }
 
         readJTable();
 
@@ -277,9 +259,11 @@ public class FrmCadastrarFilhos extends javax.swing.JFrame {
 
             txtNomeFilho.setText("");
             txtDataDeNascimentoFilho.setText("");
-            rbMasculino.setText("");
-            rbFeminino.setText("");
-
+            if (rbMasculino.isSelected()) {
+                rbMasculino.setText("");
+            } else {
+                rbFeminino.setText("");
+            }
             readJTable();
 
         }
@@ -298,9 +282,11 @@ public class FrmCadastrarFilhos extends javax.swing.JFrame {
 
             txtNomeFilho.setText("");
             txtDataDeNascimentoFilho.setText("");
-            rbMasculino.setText("");
-            rbFeminino.setText("");
-
+            if (rbMasculino.isSelected()) {
+                rbMasculino.setText("");
+            } else {
+                rbFeminino.setText("");
+            }
             readJTable();
 
         } else {
@@ -319,13 +305,15 @@ public class FrmCadastrarFilhos extends javax.swing.JFrame {
         readForDesc(txtPesquisarFilho.getText());
     }//GEN-LAST:event_btPesquisarActionPerformed
 
-    private void txtpaiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtpaiActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtpaiActionPerformed
-
     private void txtDataDeNascimentoFilhoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDataDeNascimentoFilhoActionPerformed
-        // TODO add your handling code here:
+        SimpleDateFormat out = new SimpleDateFormat("dd/MM/yyyy");
+
+        String result = out.format(new Date());
     }//GEN-LAST:event_txtDataDeNascimentoFilhoActionPerformed
+
+    private void rbMasculinoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbMasculinoActionPerformed
+        
+    }//GEN-LAST:event_rbMasculinoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -373,13 +361,11 @@ public class FrmCadastrarFilhos extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btAlterar;
     private javax.swing.JButton btExcluir;
+    private javax.swing.ButtonGroup btGroup;
     private javax.swing.JButton btPesquisar;
     private javax.swing.JButton btSalvar;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTable jTable1;
     private javax.swing.JLabel lbCadastroFilhos;
     private javax.swing.JLabel lbDataDeNascimento;
     private javax.swing.JLabel lbNome;
@@ -390,6 +376,5 @@ public class FrmCadastrarFilhos extends javax.swing.JFrame {
     private javax.swing.JFormattedTextField txtDataDeNascimentoFilho;
     private javax.swing.JTextField txtNomeFilho;
     private javax.swing.JTextField txtPesquisarFilho;
-    private javax.swing.JTextField txtpai;
     // End of variables declaration//GEN-END:variables
 }
